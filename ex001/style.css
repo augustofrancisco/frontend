@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#fundochat {
+    
+    height: 497px;
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(139, 170, 255);
+    border-radius: 10px;
+}
+
+#header {
+
+    height: 50px;
+    width: 350px;
+    background-color: rgb(61, 111, 250);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#header > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3px;
+    padding-left: 5px;
+    color: white;
+}
+
+#fundo {
+
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 340px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 5px 5px 0px 0px;
+    
+}
+
+#send {
+    
+    display: flex;
+    padding-left: 5px;
+    padding-top: 10px;
+    height: 30px;
+    width: 340px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 5px;
+}
+
+#enviar {
+    height: 20px;
+    
+}
+
+button {
+    height:23.5px;
+}
+
+.left {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+}
+
+.fundomensagemdireita {
+    background-color: rgb(139, 170, 255); 
+    padding: 2px 10px 2px 10px;
+    margin: 1px;
+    border-radius: 10px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fundomensagemesquerda {
+    background-color: rgb(203, 180, 255); 
+    padding: 2px 10px 2px 10px;
+    margin: 1px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.diz {
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}

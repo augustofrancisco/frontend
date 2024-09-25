@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atendimento Online</title>
+</head>
+<body>
+    <div id="fundochat">
+
+        <div id="header">
+            <h1>Atendimento Online</h1>
+        </div>
+
+        <div id="fundo">
+            <div class="msg-att">
+                <div class="diz">Atendente diz:</div>
+                <div class="fundomensagemesquerda">bla bla bla bla bla bla</div>
+            </div>
+            <div class="msg-user">
+                <div class="diz">Você diz:</div>
+                <div class="fundomensagemdireita">bla bla bla bla bla bla</div>
+            </div>
+            <div class="msg-att">
+                <div class="diz">Atendente diz:</div>
+                <div class="fundomensagemesquerda">bla bla bla bla bla bla</div>
+            </div>
+            <div class="msg-user">
+                <div class="diz">Você diz:</div>
+                <div class="fundomensagemdireita">bla bla bla bla bla bla</div>
+            </div>
+        </div>
+
+        <div id="typearea">
+            <form id="form-msg" action="index.html" method="post">
+                <input id="type" type="text" name="enviar" placeholder="Digite sua mensagem...">
+                <button id="send">Enviar</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        const mensagem = document.querySelector("#type") 
+        const form = document.querySelector("#form-msg")
+        const chat = document.querySelector("#fundo")
+
+        function addmessage() {
+            const type = mensagem.value;
+
+            // <div></div>
+            const adcmsg = document.createElement("div");
+
+            // <div class='msg-user'></div>
+            adcmsg.classList.add("msg-user");
+
+            // <div class='msg-user'>...</div>
+            adcmsg.innerHTML = `<div class="diz">Você diz:</div>
+                                <div class="fundomensagemdireita">${type}</div>`;
+            
+            // adicionouao chat que ta em tela
+            chat.appendChild(adcmsg);
+
+            mensagem.value = '';
+
+        }
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            addmessage();
+
+        });
+
+    </script>
+</body>
+</html>
