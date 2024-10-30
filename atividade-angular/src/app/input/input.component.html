@@ -1,0 +1,4 @@
+<form (ngSubmit)="sendMessage()" id="form-msg">
+    <input id="type" [(ngModel)]="newMessageText" name="message" type="text" placeholder="Digite sua mensagem..." required />
+    <button id="send" type="submit">Enviar</button>
+  </form>

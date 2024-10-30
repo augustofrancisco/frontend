@@ -1,0 +1,7 @@
+<div [class.msg-att]="message.sender === 'Atendente'" [class.msg-user]="message.sender === 'Você'">
+    <div class="diz">{{ message.sender }} diz:</div>
+    <div [class.fundomensagemesquerda]="message.sender === 'Atendente'" 
+         [class.fundomensagemdireita]="message.sender === 'Você'">
+      {{ message.text }}
+    </div>
+  </div>
